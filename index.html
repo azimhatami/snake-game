@@ -31,10 +31,26 @@
             font-size: 13px;
             margin-top: 12px;
         }
+        .score-bar {
+            width: 400px;
+            display: flex;
+            justify-content: space-between;
+            color: #cdd6f4;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .score-bar .high {
+            color: #f9e2af;
+        }
     </style>
 </head>
 <body>
     <h1>Snake Game</h1>
+    <div class="score-bar">
+        <span class="high">High Score: <span id="highScoreText">0</span></span>
+        <span>Score: <span id="scoreText">0</span></span>
+    </div>
     <canvas id="game" width="400" height="400"></canvas>
     <p class="hint">Use Arrow Keys or WASD to move &middot; Space to restart</p>
     <script src="index.js"></script>

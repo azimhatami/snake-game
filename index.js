@@ -97,10 +97,8 @@ function isGameOver() {
   return gameOver;
 }
 function drawScore() {
-  ctx.fillStyle = "white";
-  ctx.font = "12px Verdana";
-  ctx.fillText("Score: " + score, canvas.width - 80, 18);
-  ctx.fillText("High Score: " + highScore, 10, 18);
+  document.getElementById("scoreText").textContent = score;
+  document.getElementById("highScoreText").textContent = highScore;
 }
 function clearScreen() {
   ctx.fillStyle = "black";
@@ -192,4 +190,5 @@ function keyDown(event) {
     inputsXVelocity = 1;
   }
 }
+drawScore();
 drawGame();
