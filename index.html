@@ -6,23 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
     <style>
-         body{
-            margin:0px;
-            padding:0px;
-            display:flex;
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: #1e1e2e;
+            font-family: Verdana, sans-serif;
         }
-        canvas{
-            box-shadow: black 20px 10px 50px;
-
+        h1 {
+            color: #a6e3a1;
+            letter-spacing: 2px;
+        }
+        canvas {
+            border: 3px solid #a6e3a1;
+            border-radius: 4px;
+            box-shadow: 0 0 30px rgba(166, 227, 161, 0.3);
+        }
+        p.hint {
+            color: #9399b2;
+            font-size: 13px;
+            margin-top: 12px;
         }
     </style>
 </head>
 <body>
     <h1>Snake Game</h1>
-    <canvas id="game" width="400" height="400"/>
+    <canvas id="game" width="400" height="400"></canvas>
+    <p class="hint">Use Arrow Keys or WASD to move &middot; Space to restart</p>
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 </html>

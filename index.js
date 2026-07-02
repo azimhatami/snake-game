@@ -44,6 +44,11 @@ function drawGame() {
   drawApple();
   drawSnake();
   drawScore();
+  if (xVelocity === 0 && yVelocity === 0 && !gameOverState) {
+    ctx.fillStyle = "white";
+    ctx.font = "16px Verdana";
+    ctx.fillText("Press an arrow key to start", canvas.width / 5, canvas.height / 2 + 60);
+  }
   if (score > 5) {
     speed = 9;
   }
@@ -93,9 +98,9 @@ function isGameOver() {
 }
 function drawScore() {
   ctx.fillStyle = "white";
-  ctx.font = "10px Verdana";
-  ctx.fillText("Score " + score, canvas.width - 50, 10);
-  ctx.fillText("High Score " + highScore, 10, 10);
+  ctx.font = "12px Verdana";
+  ctx.fillText("Score: " + score, canvas.width - 80, 18);
+  ctx.fillText("High Score: " + highScore, 10, 18);
 }
 function clearScreen() {
   ctx.fillStyle = "black";
